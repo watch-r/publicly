@@ -1,10 +1,10 @@
-"use client"
+"use client";
 import { Button } from "@/components/ui/button";
 import { Flame, Menu, X, Bell, Plus, User } from "lucide-react";
 import { useState } from "react";
 import { ThemeToggle } from "./ui/toggleTheme";
 
-export function Header() {
+export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
@@ -46,7 +46,6 @@ export function Header() {
                     >
                         Profile
                     </a>
-                    <ThemeToggle />
                 </nav>
 
                 {/* Desktop Actions */}
@@ -61,22 +60,26 @@ export function Header() {
                         <Plus className="h-4 w-4" />
                         New Challenge
                     </Button>
+                    <ThemeToggle />
                     <Button variant="outline" size="icon">
                         <User className="h-5 w-5" />
                     </Button>
                 </div>
 
                 {/* Mobile Menu Button */}
-                <button
-                    className="md:hidden p-2 text-foreground"
-                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                >
-                    {mobileMenuOpen ? (
-                        <X className="h-6 w-6" />
-                    ) : (
-                        <Menu className="h-6 w-6" />
-                    )}
-                </button>
+                <div className="flex items-center gap-2 md:hidden">
+                    <ThemeToggle />
+                    <button
+                        className="md:hidden p-2 text-foreground"
+                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    >
+                        {mobileMenuOpen ? (
+                            <X className="h-6 w-6" />
+                        ) : (
+                            <Menu className="h-6 w-6" />
+                        )}
+                    </button>
+                </div>
             </div>
 
             {/* Mobile Menu */}

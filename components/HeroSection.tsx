@@ -12,13 +12,13 @@ import {
     Zap,
 } from "lucide-react";
 
-export function HeroSection() {
+export default function HeroSection() {
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
             {/* Background effects */}
-            <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-card" />
-            <div className="absolute top-1/4 left-1/2 -translate-x-1/2 h-[600px] w-[600px] rounded-full bg-primary/5 blur-[120px]" />
-            <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-b from-background via-background to-card" />
+            <div className="absolute top-1/4 left-1/2 -translate-x-1/2 h-150 w-150 rounded-full bg-primary/5 blur-[120px]" />
+            <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-border to-transparent" />
 
             {/* Floating elements */}
             <div className="absolute top-32 left-[15%] animate-float opacity-60">
@@ -47,7 +47,7 @@ export function HeroSection() {
                 </div>
 
                 {/* Headline */}
-                <h1 className="mb-6 font-display text-5xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl opacity-0 animate-fade-in">
+                <h1 className="mb-6 text-5xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl opacity-0 animate-fade-in">
                     Make Promises.{" "}
                     <span className="text-gradient-primary">Keep Them.</span>
                     <br />
@@ -76,7 +76,7 @@ export function HeroSection() {
                 </div>
 
                 {/* Stats */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto opacity-0 animate-fade-in-up animation-delay-400">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto animate-fade-in-up animation-delay-400 opacity-70">
                     <div className="rounded-2xl border border-border bg-card/50 p-6 backdrop-blur-sm">
                         <div className="flex items-center justify-center gap-2 mb-2">
                             <Target className="h-5 w-5 text-primary" />

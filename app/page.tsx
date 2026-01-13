@@ -1,11 +1,10 @@
-
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { ChallengeCard } from "@/components/ChallengeCard";
 import { CTASection } from "@/components/CTASection";
 import { FailureCard } from "@/components/FailureCard";
 import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
-import { HeroSection } from "@/components/HeroSection";
+import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
 import { HowItWorks } from "@/components/HowItWorks";
 import { Leaderboard } from "@/components/Leaderboard";
 import { ProfileCard } from "@/components/ProfileCard";
@@ -108,7 +107,7 @@ const mockLeaderboard = [
     },
 ];
 
-const Home = () => {
+export default function Home() {
     return (
         <div className="min-h-screen bg-background">
             <Header />
@@ -117,10 +116,10 @@ const Home = () => {
             <HeroSection />
 
             {/* How It Works */}
-            <HowItWorks />
+            {/* <HowItWorks /> */}
 
             {/* Categories */}
-            <CategoriesSection />
+            {/* <CategoriesSection /> */}
 
             {/* Live Feed Preview */}
             <section className="py-20" id="feed">
@@ -260,6 +259,4 @@ const Home = () => {
             <Footer />
         </div>
     );
-};
-
-export default Home;
+}
