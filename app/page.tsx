@@ -116,10 +116,10 @@ export default function Home() {
             <HeroSection />
 
             {/* How It Works */}
-            {/* <HowItWorks /> */}
+            <HowItWorks />
 
             {/* Categories */}
-            {/* <CategoriesSection /> */}
+            <CategoriesSection />
 
             {/* Live Feed Preview */}
             <section className="py-20" id="feed">
@@ -127,7 +127,7 @@ export default function Home() {
                     {/* Section Header */}
                     <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-4">
                         <div>
-                            <Badge className="mb-4">
+                            <Badge variant={'trending'} className="mb-4">
                                 <Flame className="mr-1 h-3 w-3" /> Live Feed
                             </Badge>
                             <h2 className="font-display text-3xl font-bold text-foreground">

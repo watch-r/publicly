@@ -21,7 +21,7 @@ export function FailureCard({
     sarcasticCaption,
 }: FailureCardProps) {
     return (
-        <div className="relative overflow-hidden rounded-2xl border-2 border-failure/50 bg-gradient-to-br from-failure/10 to-background p-6 shadow-xl shadow-failure/20">
+        <div className="relative overflow-hidden rounded-2xl border-2 border-failure-50 bg-linear-to-br from-failure-10 to-background p-6 shadow-xl shadow-failure/20">
             {/* Failure stamp watermark */}
             <div className="absolute -right-8 -top-8 rotate-12 opacity-10">
                 <X className="h-40 w-40 text-failure" strokeWidth={4} />

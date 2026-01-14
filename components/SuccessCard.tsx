@@ -23,7 +23,7 @@ export function SuccessCard({
     proofPreview,
 }: SuccessCardProps) {
     return (
-        <div className="relative overflow-hidden rounded-2xl border-2 border-success/50 bg-gradient-to-br from-success/10 to-background p-6 shadow-xl shadow-success/20">
+        <div className="relative overflow-hidden rounded-2xl border-2 border-success-50 bg-linear-to-br from-success-10 to-background p-6 shadow-xl shadow-success/20">
             {/* Success glow */}
             <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-success/20 blur-3xl" />
 
@@ -79,7 +79,7 @@ export function SuccessCard({
                         alt="Proof"
                         className="h-full w-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                    <div className="absolute inset-0 bg-linear-to-t from-background-80 to-transparent" />
                     <p className="absolute bottom-3 left-3 text-sm font-semibold text-foreground">
                         Verified Proof ✓
                     </p>
@@ -87,7 +87,7 @@ export function SuccessCard({
             )}
 
             {/* Meta */}
-            <div className="relative flex items-center justify-between border-t border-border/50 pt-4">
+            <div className="relative flex items-center justify-between border-t border-border/10 pt-4">
                 <span className="flex items-center gap-1 text-xs text-muted-foreground">
                     <Calendar className="h-3 w-3" />
                     Completed: {completedDate}

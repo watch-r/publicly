@@ -5,16 +5,102 @@
 @import "tw-animate-css";
 /* @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap'); */
 
-@tailwind base;
-@tailwind components;
 @tailwind utilities;
 
-@custom-variant dark (&:is(.dark *));
+/* @custom-variant dark (&:is(.dark *)); */
 
 /* ===============================
    Design Tokens (Dark by Default)
 ================================ */
+
 :root {
+    --radius: 0.75rem;
+
+    /* Base colors */
+    --background: 0 0% 100%; /* white */
+    --foreground: 240 10% 10%; /* near-black */
+
+    --card: 0 0% 98%; /* light gray */
+    --card-foreground: 240 10% 10%;
+
+    --popover: 0 0% 98%;
+    --popover-foreground: 240 10% 10%;
+
+    /* Brand */
+    --primary: 16 100% 45%; /* orange-red */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 16 100% 50%;
+
+    --secondary: 240 8% 90%; /* pale gray-blue */
+    --secondary-foreground: 240 8% 20%;
+
+    --muted: 240 8% 92%;
+    --muted-foreground: 240 5% 40%;
+
+    --accent: 280 100% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    /* State */
+    --success: 142 70% 35%; /* softer green */
+    --success-foreground: 0 0% 100%;
+
+    --failure: 0 85% 50%;
+    --failure-foreground: 0 0% 100%;
+
+    --warning: 45 100% 50%;
+    --warning-foreground: 0 0% 10%;
+
+    --destructive: 0 85% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* UI */
+    --border: 240 8% 85%;
+    --input: 240 8% 92%;
+    --ring: 16 100% 45%;
+
+    /* Sidebar */
+    --sidebar: 0 0% 98%;
+    --sidebar-foreground: 240 8% 20%;
+    --sidebar-primary: 16 100% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 8% 92%;
+    --sidebar-accent-foreground: 240 8% 20%;
+    --sidebar-border: 240 8% 85%;
+    --sidebar-ring: 16 100% 45%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(
+        135deg,
+        hsl(16 100% 45%),
+        hsl(35 100% 50%)
+    );
+    --gradient-success: linear-gradient(
+        135deg,
+        hsl(142 70% 35%),
+        hsl(160 80% 40%)
+    );
+    --gradient-failure: linear-gradient(
+        135deg,
+        hsl(0 85% 50%),
+        hsl(340 80% 45%)
+    );
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(0 0% 95%));
+    --gradient-hero: linear-gradient(
+        180deg,
+        hsl(0 0% 100%),
+        hsl(240 15% 95%),
+        hsl(0 0% 100%)
+    );
+
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(16 100% 45% / 0.3);
+    --shadow-success: 0 0 30px hsl(142 70% 35% / 0.4);
+    --shadow-failure: 0 0 30px hsl(0 85% 50% / 0.4);
+    --shadow-card: 0 4px 30px hsl(0 0% 0% / 0.1);
+    --shadow-elevated: 0 20px 60px hsl(0 0% 0% / 0.2);
+}
+
+.dark {
     --radius: 0.75rem;
 
     /* Base colors */
@@ -201,8 +287,65 @@
     .bg-success {
         background-color: hsl(var(--success));
     }
-    .bg-failure{
+    .bg-success-light {
+        background-color: hsl(var(--success) / 0.1);
+    }
+    .bg-success-5 {
+        background-color: hsl(var(--success) / 0.05);
+    }
+    .bg-failure {
         background-color: hsl(var(--failure));
+    }
+    .bg-failure-5 {
+        background-color: hsl(var(--failure) / 0.05);
+    }
+    bg-failure-light {
+        background-color: hsl(var(--failure) / 0.1);
+    }
+    .bg-warning {
+        background-color: hsl(var(--warning));
+    }
+    .bg-warning-light {
+        background-color: hsl(var(--warning) / 0.1);
+    }
+    .text-success {
+        color: hsl(var(--success));
+    }
+    .text-warning {
+        color: hsl(var(--warning));
+    }
+    .text-failure {
+        color: hsl(var(--failure));
+    }
+    .border-success-30 {
+        border-color: hsl(var(--success) / 0.3);
+    }
+    .border-failure-30 {
+        border-color: hsl(var(--failure) / 0.3);
+    }
+    .border-failure-50 {
+        border-color: hsl(var(--failure) / 0.5);
+    }
+    .border-success-50 {
+        border-color: hsl(var(--success) / 0.5);
+    }
+    .shadow-success {
+        box-shadow: 0 0 30px hsl(var(--success));
+    }
+    .shadow-success-10 {
+        box-shadow: 0 0 20px hsl(var(--success) / 0.1);
+    }
+    .from-success-10 {
+        --tw-gradient-from: hsl(var(--success) / 0.1);
+    }
+    .to-background {
+        --tw-gradient-to: hsl(var(--background));
+    }
+    .from-background-80 {
+        --tw-gradient-from: hsl(var(--background) / 0.8);
+    }
+    .from-failure-10 {
+        --tw-gradient-from: hsl(var(--failure) / 0.1);
     }
 }
 

@@ -23,7 +23,7 @@ const steps = [
         description:
             "Your deadline is locked. The pressure is on. Your followers are watching.",
         color: "text-warning",
-        bgColor: "bg-warning/10",
+        bgColor: "bg-warning-light",
     },
     {
         icon: Camera,
@@ -39,7 +39,7 @@ const steps = [
         description:
             "Community or AI verification confirms your achievement. No fake flexing allowed.",
         color: "text-success",
-        bgColor: "bg-success/10",
+        bgColor: "bg-success-light",
     },
 ];
 
@@ -47,7 +47,7 @@ export function HowItWorks() {
     return (
         <section className="relative py-24 overflow-hidden" id="how-it-works">
             {/* Background */}
-            <div className="absolute inset-0 bg-gradient-to-b from-card to-background" />
+            <div className="absolute inset-0 bg-linear-to-b from-card to-background" />
 
             <div className="container relative mx-auto px-4">
                 {/* Header */}
@@ -65,7 +65,7 @@ export function HowItWorks() {
                 <div className="relative grid gap-8 md:grid-cols-4">
                     {/* Connection line */}
                     <div className="absolute top-12 left-0 right-0 hidden md:block">
-                        <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+                        <div className="h-px bg-linear-to-r from-transparent via-border to-transparent" />
                     </div>
 
                     {steps.map((step, index) => (
@@ -109,7 +109,7 @@ export function HowItWorks() {
                 {/* Bottom outcomes */}
                 <div className="mt-20 grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
                     {/* Success */}
-                    <div className="group rounded-2xl border border-success/30 bg-success/5 p-6 transition-all hover:border-success/50 hover:shadow-lg hover:shadow-success/10">
+                    <div className="group rounded-2xl border border-success-30 bg-success-5 p-6 transition-all hover:border-success-50 hover:shadow-lg hover:shadow-success-10">
                         <div className="flex items-center gap-4 mb-4">
                             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-success/20">
                                 <Trophy className="h-6 w-6 text-success" />
@@ -130,7 +130,7 @@ export function HowItWorks() {
                     </div>
 
                     {/* Failure */}
-                    <div className="group rounded-2xl border border-failure/30 bg-failure/5 p-6 transition-all hover:border-failure/50 hover:shadow-lg hover:shadow-failure/10">
+                    <div className="group rounded-2xl border border-failure-30 bg-failure-5 p-6 transition-all hover:border-failure-50 hover:shadow-lg hover:shadow-failure/10">
                         <div className="flex items-center gap-4 mb-4">
                             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-failure/20">
                                 <Flame className="h-6 w-6 text-failure" />

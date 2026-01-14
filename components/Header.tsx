@@ -12,7 +12,7 @@ export default function Header() {
             <div className="container mx-auto flex h-16 items-center justify-between px-4">
                 {/* Logo */}
                 <a href="/" className="flex items-center gap-2">
-                    <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-orange-400 shadow-lg shadow-primary/30">
+                    <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-linear-to-br from-primary to-orange-400 shadow-lg shadow-primary/30">
                         <Flame className="h-5 w-5 text-primary-foreground" />
                     </div>
                     <span className="font-display text-xl font-bold text-foreground">
